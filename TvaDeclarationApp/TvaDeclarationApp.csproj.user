@@ -1,7 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Controleur-interf\AddDeduction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\Addperiod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\editdeduction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\Editperiode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\editsociete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\listsociete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\Udeduction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\Uexercice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\Ufournisseur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\Uperiode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controleur-interf\Usociete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormFinal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Menu.cs">

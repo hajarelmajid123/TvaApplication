@@ -1,26 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\TvaDeclarationApp\\TvaDeclarationApp\\TvaDeclarationApp.csproj": {}
+    "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\TvaDeclarationApp\\TvaDeclarationApp\\TvaDeclarationApp.csproj": {
+    "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\TvaDeclarationApp\\TvaDeclarationApp\\TvaDeclarationApp.csproj",
+        "projectUniqueName": "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj",
         "projectName": "TvaDeclarationApp",
-        "projectPath": "C:\\Users\\user\\source\\repos\\TvaDeclarationApp\\TvaDeclarationApp\\TvaDeclarationApp.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\TvaDeclarationApp\\TvaDeclarationApp\\obj\\",
+        "projectPath": "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj",
+        "packagesPath": "C:\\Users\\ELHAROUACHI NAIMA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ELHAROUACHI NAIMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
