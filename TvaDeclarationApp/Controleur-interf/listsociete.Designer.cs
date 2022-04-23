@@ -39,12 +39,12 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 126);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(691, 505);
+            this.dataGridView1.Size = new System.Drawing.Size(674, 422);
             this.dataGridView1.TabIndex = 0;
             // 
             // lsoc
@@ -101,7 +101,7 @@
             this.Controls.Add(this.lsoc);
             this.Controls.Add(this.dataGridView1);
             this.Name = "listsociete";
-            this.Size = new System.Drawing.Size(697, 631);
+            this.Size = new System.Drawing.Size(687, 559);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

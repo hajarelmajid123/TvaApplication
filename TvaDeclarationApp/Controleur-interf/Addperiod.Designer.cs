@@ -33,12 +33,12 @@
             this.lsiege = new System.Windows.Forms.Label();
             this.MontantPériode = new System.Windows.Forms.Label();
             this.txtmontantperiode = new System.Windows.Forms.TextBox();
-            this.btnEnregsiter = new System.Windows.Forms.Button();
             this.datedeclaration = new System.Windows.Forms.MonthCalendar();
             this.comboBoexercice = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,19 +88,6 @@
             this.txtmontantperiode.Size = new System.Drawing.Size(206, 38);
             this.txtmontantperiode.TabIndex = 149;
             // 
-            // btnEnregsiter
-            // 
-            this.btnEnregsiter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(66)))), ((int)(((byte)(99)))));
-            this.btnEnregsiter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEnregsiter.ForeColor = System.Drawing.Color.White;
-            this.btnEnregsiter.Location = new System.Drawing.Point(327, 495);
-            this.btnEnregsiter.Name = "btnEnregsiter";
-            this.btnEnregsiter.Size = new System.Drawing.Size(187, 55);
-            this.btnEnregsiter.TabIndex = 157;
-            this.btnEnregsiter.Text = "Enregsiter";
-            this.btnEnregsiter.UseVisualStyleBackColor = false;
-            this.btnEnregsiter.Click += new System.EventHandler(this.btnEnregsiter_Click);
-            // 
             // datedeclaration
             // 
             this.datedeclaration.BackColor = System.Drawing.SystemColors.InactiveBorder;
@@ -149,21 +136,34 @@
             this.label6.TabIndex = 138;
             this.label6.Text = "Exercice   :";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(186)))), ((int)(((byte)(225)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(469, 419);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 55);
+            this.button1.TabIndex = 168;
+            this.button1.Text = "Enregsitrer";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Addperiod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.datedeclaration);
-            this.Controls.Add(this.btnEnregsiter);
             this.Controls.Add(this.txtmontantperiode);
             this.Controls.Add(this.MontantPériode);
             this.Controls.Add(this.lsiege);
             this.Controls.Add(this.txtnompreiode);
             this.Controls.Add(this.facture);
             this.Name = "Addperiod";
-            this.Size = new System.Drawing.Size(697, 631);
+            this.Size = new System.Drawing.Size(697, 558);
             this.Load += new System.EventHandler(this.Addperiod_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -179,11 +179,11 @@
         private Label lsiege;
         private Label MontantPériode;
         private TextBox txtmontantperiode;
-        private Button btnEnregsiter;
         private MonthCalendar datedeclaration;
         private ComboBox comboBoexercice;
         private Label label5;
         private Panel panel1;
         private Label label6;
+        private Button button1;
     }
 }

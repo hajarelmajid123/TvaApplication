@@ -26,5 +26,15 @@ namespace TvaDeclarationApp.Controleur_interf
         {
 
         }
+
+        private void btnEnregsiter_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void suppr_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

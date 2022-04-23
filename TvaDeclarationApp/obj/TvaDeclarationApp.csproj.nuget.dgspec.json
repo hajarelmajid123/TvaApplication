@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj": {}
+    "C:\\Users\\ELHAROUACHI NAIMA\\Desktop\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj": {
+    "C:\\Users\\ELHAROUACHI NAIMA\\Desktop\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj",
+        "projectUniqueName": "C:\\Users\\ELHAROUACHI NAIMA\\Desktop\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj",
         "projectName": "TvaDeclarationApp",
-        "projectPath": "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj",
+        "projectPath": "C:\\Users\\ELHAROUACHI NAIMA\\Desktop\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj",
         "packagesPath": "C:\\Users\\ELHAROUACHI NAIMA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ELHAROUACHI NAIMA\\source\\repos\\TvaApplication\\TvaDeclarationApp\\obj\\",
+        "outputPath": "C:\\Users\\ELHAROUACHI NAIMA\\Desktop\\TvaApplication\\TvaDeclarationApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"

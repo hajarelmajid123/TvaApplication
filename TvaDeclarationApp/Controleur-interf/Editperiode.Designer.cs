@@ -93,10 +93,10 @@
             // 
             // Supprimer
             // 
-            this.Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(66)))), ((int)(((byte)(99)))));
+            this.Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(186)))), ((int)(((byte)(225)))));
             this.Supprimer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Supprimer.ForeColor = System.Drawing.Color.White;
-            this.Supprimer.Location = new System.Drawing.Point(484, 538);
+            this.Supprimer.Location = new System.Drawing.Point(488, 431);
             this.Supprimer.Name = "Supprimer";
             this.Supprimer.Size = new System.Drawing.Size(187, 55);
             this.Supprimer.TabIndex = 174;
@@ -106,10 +106,10 @@
             // 
             // btnEnregsiter
             // 
-            this.btnEnregsiter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(66)))), ((int)(((byte)(99)))));
+            this.btnEnregsiter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(186)))), ((int)(((byte)(225)))));
             this.btnEnregsiter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEnregsiter.ForeColor = System.Drawing.Color.White;
-            this.btnEnregsiter.Location = new System.Drawing.Point(257, 538);
+            this.btnEnregsiter.Location = new System.Drawing.Point(263, 431);
             this.btnEnregsiter.Name = "btnEnregsiter";
             this.btnEnregsiter.Size = new System.Drawing.Size(187, 55);
             this.btnEnregsiter.TabIndex = 173;
@@ -178,7 +178,7 @@
             this.Controls.Add(this.txtnompreiode);
             this.Controls.Add(this.facture);
             this.Name = "Editperiode";
-            this.Size = new System.Drawing.Size(697, 631);
+            this.Size = new System.Drawing.Size(697, 558);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

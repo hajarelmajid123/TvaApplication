@@ -30,6 +30,8 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBoperiode = new System.Windows.Forms.ComboBox();
             this.btnEnregsiter = new System.Windows.Forms.Button();
             this.combomodepaiement = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,8 +56,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.combofournisseur = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoperiode = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.datefacture = new System.Windows.Forms.MonthCalendar();
             this.datepaiement = new System.Windows.Forms.MonthCalendar();
             this.Supprimer = new System.Windows.Forms.Button();
@@ -80,18 +80,39 @@
             this.panel1.Controls.Add(this.comboBoperiode);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(697, 37);
+            this.panel1.Size = new System.Drawing.Size(694, 37);
             this.panel1.TabIndex = 129;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(377, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 17);
+            this.label6.TabIndex = 138;
+            this.label6.Text = "Période  :";
+            // 
+            // comboBoperiode
+            // 
+            this.comboBoperiode.FormattingEnabled = true;
+            this.comboBoperiode.Items.AddRange(new object[] {
+            "Ainchock"});
+            this.comboBoperiode.Location = new System.Drawing.Point(465, 8);
+            this.comboBoperiode.Name = "comboBoperiode";
+            this.comboBoperiode.Size = new System.Drawing.Size(206, 23);
+            this.comboBoperiode.TabIndex = 137;
             // 
             // btnEnregsiter
             // 
-            this.btnEnregsiter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(66)))), ((int)(((byte)(99)))));
+            this.btnEnregsiter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(186)))), ((int)(((byte)(225)))));
             this.btnEnregsiter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEnregsiter.Location = new System.Drawing.Point(272, 569);
+            this.btnEnregsiter.ForeColor = System.Drawing.Color.White;
+            this.btnEnregsiter.Location = new System.Drawing.Point(474, 418);
             this.btnEnregsiter.Name = "btnEnregsiter";
             this.btnEnregsiter.Size = new System.Drawing.Size(187, 55);
             this.btnEnregsiter.TabIndex = 127;
-            this.btnEnregsiter.Text = "Enregsiter";
+            this.btnEnregsiter.Text = "Enregsitrer";
             this.btnEnregsiter.UseVisualStyleBackColor = false;
             this.btnEnregsiter.Click += new System.EventHandler(this.btnEnregsiter_Click);
             // 
@@ -100,7 +121,7 @@
             this.combomodepaiement.FormattingEnabled = true;
             this.combomodepaiement.Items.AddRange(new object[] {
             "Ainchock"});
-            this.combomodepaiement.Location = new System.Drawing.Point(164, 357);
+            this.combomodepaiement.Location = new System.Drawing.Point(164, 347);
             this.combomodepaiement.Name = "combomodepaiement";
             this.combomodepaiement.Size = new System.Drawing.Size(179, 23);
             this.combomodepaiement.TabIndex = 118;
@@ -117,7 +138,7 @@
             // 
             // txtobservation
             // 
-            this.txtobservation.Location = new System.Drawing.Point(475, 347);
+            this.txtobservation.Location = new System.Drawing.Point(475, 261);
             this.txtobservation.Multiline = true;
             this.txtobservation.Name = "txtobservation";
             this.txtobservation.Size = new System.Drawing.Size(206, 87);
@@ -127,7 +148,7 @@
             // 
             this.lcnss.AutoSize = true;
             this.lcnss.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lcnss.Location = new System.Drawing.Point(364, 368);
+            this.lcnss.Location = new System.Drawing.Point(369, 309);
             this.lcnss.Name = "lcnss";
             this.lcnss.Size = new System.Drawing.Size(96, 17);
             this.lcnss.TabIndex = 109;
@@ -137,7 +158,7 @@
             // 
             this.lice.AutoSize = true;
             this.lice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lice.Location = new System.Drawing.Point(1, 363);
+            this.lice.Location = new System.Drawing.Point(-1, 353);
             this.lice.Name = "lice";
             this.lice.Size = new System.Drawing.Size(136, 17);
             this.lice.TabIndex = 106;
@@ -147,7 +168,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(364, 292);
+            this.label1.Location = new System.Drawing.Point(364, 206);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 103;
@@ -156,7 +177,7 @@
             // 
             this.lmontantht.AutoSize = true;
             this.lmontantht.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lmontantht.Location = new System.Drawing.Point(364, 262);
+            this.lmontantht.Location = new System.Drawing.Point(377, 174);
             this.lmontantht.Name = "lmontantht";
             this.lmontantht.Size = new System.Drawing.Size(88, 17);
             this.lmontantht.TabIndex = 102;
@@ -182,7 +203,7 @@
             // 
             // txtprorata
             // 
-            this.txtprorata.Location = new System.Drawing.Point(475, 293);
+            this.txtprorata.Location = new System.Drawing.Point(475, 207);
             this.txtprorata.Multiline = true;
             this.txtprorata.Name = "txtprorata";
             this.txtprorata.Size = new System.Drawing.Size(206, 38);
@@ -198,7 +219,7 @@
             // 
             // txtmntht
             // 
-            this.txtmntht.Location = new System.Drawing.Point(475, 248);
+            this.txtmntht.Location = new System.Drawing.Point(475, 162);
             this.txtmntht.Multiline = true;
             this.txtmntht.Name = "txtmntht";
             this.txtmntht.Size = new System.Drawing.Size(206, 38);
@@ -282,7 +303,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(364, 293);
+            this.label4.Location = new System.Drawing.Point(377, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 134;
@@ -293,7 +314,7 @@
             this.combofournisseur.FormattingEnabled = true;
             this.combofournisseur.Items.AddRange(new object[] {
             "Ainchock"});
-            this.combofournisseur.Location = new System.Drawing.Point(475, 466);
+            this.combofournisseur.Location = new System.Drawing.Point(474, 374);
             this.combofournisseur.Name = "combofournisseur";
             this.combofournisseur.Size = new System.Drawing.Size(206, 23);
             this.combofournisseur.TabIndex = 135;
@@ -302,31 +323,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(377, 466);
+            this.label2.Location = new System.Drawing.Point(376, 374);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 136;
             this.label2.Text = "Fournisseur  :";
-            // 
-            // comboBoperiode
-            // 
-            this.comboBoperiode.FormattingEnabled = true;
-            this.comboBoperiode.Items.AddRange(new object[] {
-            "Ainchock"});
-            this.comboBoperiode.Location = new System.Drawing.Point(484, 8);
-            this.comboBoperiode.Name = "comboBoperiode";
-            this.comboBoperiode.Size = new System.Drawing.Size(206, 23);
-            this.comboBoperiode.TabIndex = 137;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(377, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 17);
-            this.label6.TabIndex = 138;
-            this.label6.Text = "Période  :";
             // 
             // datefacture
             // 
@@ -338,15 +339,16 @@
             // datepaiement
             // 
             this.datepaiement.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.datepaiement.Location = new System.Drawing.Point(147, 395);
+            this.datepaiement.Location = new System.Drawing.Point(137, 342);
             this.datepaiement.Name = "datepaiement";
             this.datepaiement.TabIndex = 140;
             // 
             // Supprimer
             // 
-            this.Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(66)))), ((int)(((byte)(99)))));
+            this.Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(186)))), ((int)(((byte)(225)))));
             this.Supprimer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Supprimer.Location = new System.Drawing.Point(484, 569);
+            this.Supprimer.ForeColor = System.Drawing.Color.White;
+            this.Supprimer.Location = new System.Drawing.Point(474, 479);
             this.Supprimer.Name = "Supprimer";
             this.Supprimer.Size = new System.Drawing.Size(187, 55);
             this.Supprimer.TabIndex = 128;
@@ -357,6 +359,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.datepaiement);
             this.Controls.Add(this.datefacture);
             this.Controls.Add(this.label2);
@@ -386,7 +389,7 @@
             this.Controls.Add(this.txfacture);
             this.Controls.Add(this.facture);
             this.Name = "AddDeduction";
-            this.Size = new System.Drawing.Size(697, 631);
+            this.Size = new System.Drawing.Size(697, 558);
             this.Load += new System.EventHandler(this.AddDeduction_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
