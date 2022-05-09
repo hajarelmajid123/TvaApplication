@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TvaAppBDModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="associe">
+          <Key>
+            <PropertyRef Name="IdAssocie" />
+          </Key>
+          <Property Name="IdAssocie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomAssocie" Type="nvarchar" MaxLength="30" />
+          <Property Name="PrenomAssocie" Type="nvarchar" MaxLength="30" />
+          <Property Name="NumCin" Type="nvarchar" MaxLength="10" />
+          <Property Name="NumCarSejour" Type="nvarchar" MaxLength="30" />
+          <Property Name="Date_nai" Type="date" />
+          <Property Name="Adresse" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" />
+          <Property Name="Fonction" Type="nvarchar" MaxLength="50" />
+          <Property Name="Part" Type="float" />
+          <Property Name="_IdSociete" Type="int" />
+        </EntityType>
+        <EntityType Name="deduction">
+          <Key>
+            <PropertyRef Name="IdDeduction" />
+          </Key>
+          <Property Name="IdDeduction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="num" Type="int" />
+          <Property Name="designation" Type="nvarchar" MaxLength="100" />
+          <Property Name="DateFact" Type="date" />
+          <Property Name="TauxTva" Type="float" />
+          <Property Name="MontHT" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MontTva" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MontTTC" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Prorata" Type="float" />
+          <Property Name="ModePaiment" Type="nvarchar" MaxLength="50" />
+          <Property Name="DatePaiment" Type="date" />
+          <Property Name="observation" Type="nvarchar" MaxLength="200" />
+          <Property Name="_IdFournisseur" Type="int" />
+          <Property Name="_IdPeriode" Type="int" />
+        </EntityType>
+        <EntityType Name="exercice">
+          <Key>
+            <PropertyRef Name="IdExercice" />
+          </Key>
+          <Property Name="IdExercice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Annee" Type="int" />
+          <Property Name="Date_debut" Type="date" />
+          <Property Name="Date_fin" Type="date" />
+          <Property Name="TypeEx" Type="nvarchar" MaxLength="40" />
+          <Property Name="ChiffreAffaire" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Cloture" Type="bit" />
+          <Property Name="DateClosure" Type="date" />
+          <Property Name="_IdSociete" Type="int" />
+        </EntityType>
+        <EntityType Name="fournisseur">
+          <Key>
+            <PropertyRef Name="IdFournisseur" />
+          </Key>
+          <Property Name="IdFournisseur" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RaisonFiscale" Type="nvarchar" MaxLength="100" />
+          <Property Name="IdFiscale" Type="int" />
+          <Property Name="Ice" Type="int" />
+          <Property Name="Adresse" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="periode">
+          <Key>
+            <PropertyRef Name="IdPeriode" />
+          </Key>
+          <Property Name="IdPeriode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomPeriode" Type="nvarchar" MaxLength="40" />
+          <Property Name="MonDeclaTVA" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="DateDeclaration" Type="date" />
+          <Property Name="_IdExercice" Type="int" />
+        </EntityType>
+        <EntityType Name="societe">
+          <Key>
+            <PropertyRef Name="IdSociete" />
+          </Key>
+          <Property Name="IdSociete" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiegeSoc" Type="nvarchar" MaxLength="200" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="30" />
+          <Property Name="FormeJuridique" Type="nvarchar" MaxLength="100" />
+          <Property Name="IdFiscal" Type="int" />
+          <Property Name="NumTaxPro" Type="int" />
+          <Property Name="Regime" Type="nvarchar" MaxLength="100" />
+          <Property Name="Ice" Type="int" />
+          <Property Name="RegistreCommerce" Type="int" />
+          <Property Name="NumCnss" Type="int" />
+          <Property Name="ModComptable" Type="nvarchar" MaxLength="100" />
+          <Property Name="LoginDGI" Type="nvarchar" MaxLength="100" />
+          <Property Name="MdpDgi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Capital" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Activite" Type="nvarchar" MaxLength="100" />
+          <Property Name="TypeRegime" Type="nvarchar" MaxLength="100" />
+          <Property Name="commune" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="idUtilisateur" />
+          </Key>
+          <Property Name="idUtilisateur" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="login" Type="nvarchar" MaxLength="100" />
+          <Property Name="mot_passe" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK__associe___IdSoci__3B75D760">
+          <End Role="societe" Type="Self.societe" Multiplicity="0..1" />
+          <End Role="associe" Type="Self.associe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="societe">
+              <PropertyRef Name="IdSociete" />
+            </Principal>
+            <Dependent Role="associe">
+              <PropertyRef Name="_IdSociete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__deduction___IdFo__45F365D3">
+          <End Role="fournisseur" Type="Self.fournisseur" Multiplicity="0..1" />
+          <End Role="deduction" Type="Self.deduction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fournisseur">
+              <PropertyRef Name="IdFournisseur" />
+            </Principal>
+            <Dependent Role="deduction">
+              <PropertyRef Name="_IdFournisseur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__deduction___IdPe__46E78A0C">
+          <End Role="periode" Type="Self.periode" Multiplicity="0..1" />
+          <End Role="deduction" Type="Self.deduction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periode">
+              <PropertyRef Name="IdPeriode" />
+            </Principal>
+            <Dependent Role="deduction">
+              <PropertyRef Name="_IdPeriode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__exercice___IdSoc__3E52440B">
+          <End Role="societe" Type="Self.societe" Multiplicity="0..1" />
+          <End Role="exercice" Type="Self.exercice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="societe">
+              <PropertyRef Name="IdSociete" />
+            </Principal>
+            <Dependent Role="exercice">
+              <PropertyRef Name="_IdSociete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__periode___IdExer__412EB0B6">
+          <End Role="exercice" Type="Self.exercice" Multiplicity="0..1" />
+          <End Role="periode" Type="Self.periode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="exercice">
+              <PropertyRef Name="IdExercice" />
+            </Principal>
+            <Dependent Role="periode">
+              <PropertyRef Name="_IdExercice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TvaAppBDModel1StoreContainer">
+          <EntitySet Name="associe" EntityType="Self.associe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="deduction" EntityType="Self.deduction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="exercice" EntityType="Self.exercice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fournisseur" EntityType="Self.fournisseur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="periode" EntityType="Self.periode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="societe" EntityType="Self.societe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="utilisateur" EntityType="Self.utilisateur" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__associe___IdSoci__3B75D760" Association="Self.FK__associe___IdSoci__3B75D760">
+            <End Role="societe" EntitySet="societe" />
+            <End Role="associe" EntitySet="associe" />
+          </AssociationSet>
+          <AssociationSet Name="FK__deduction___IdFo__45F365D3" Association="Self.FK__deduction___IdFo__45F365D3">
+            <End Role="fournisseur" EntitySet="fournisseur" />
+            <End Role="deduction" EntitySet="deduction" />
+          </AssociationSet>
+          <AssociationSet Name="FK__deduction___IdPe__46E78A0C" Association="Self.FK__deduction___IdPe__46E78A0C">
+            <End Role="periode" EntitySet="periode" />
+            <End Role="deduction" EntitySet="deduction" />
+          </AssociationSet>
+          <AssociationSet Name="FK__exercice___IdSoc__3E52440B" Association="Self.FK__exercice___IdSoc__3E52440B">
+            <End Role="societe" EntitySet="societe" />
+            <End Role="exercice" EntitySet="exercice" />
+          </AssociationSet>
+          <AssociationSet Name="FK__periode___IdExer__412EB0B6" Association="Self.FK__periode___IdExer__412EB0B6">
+            <End Role="exercice" EntitySet="exercice" />
+            <End Role="periode" EntitySet="periode" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TvaAppBDModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="associe">
+          <Key>
+            <PropertyRef Name="IdAssocie" />
+          </Key>
+          <Property Name="IdAssocie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomAssocie" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PrenomAssocie" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NumCin" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NumCarSejour" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Date_nai" Type="DateTime" Precision="0" />
+          <Property Name="Adresse" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Fonction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Part" Type="Double" />
+          <Property Name="C_IdSociete" Type="Int32" />
+          <NavigationProperty Name="societe" Relationship="Self.FK__associe___IdSoci__3B75D760" FromRole="associe" ToRole="societe" />
+        </EntityType>
+        <EntityType Name="deduction">
+          <Key>
+            <PropertyRef Name="IdDeduction" />
+          </Key>
+          <Property Name="IdDeduction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="num" Type="Int32" />
+          <Property Name="designation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DateFact" Type="DateTime" Precision="0" />
+          <Property Name="TauxTva" Type="Double" />
+          <Property Name="MontHT" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MontTva" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MontTTC" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Prorata" Type="Double" />
+          <Property Name="ModePaiment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DatePaiment" Type="DateTime" Precision="0" />
+          <Property Name="observation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="C_IdFournisseur" Type="Int32" />
+          <Property Name="C_IdPeriode" Type="Int32" />
+          <NavigationProperty Name="fournisseur" Relationship="Self.FK__deduction___IdFo__45F365D3" FromRole="deduction" ToRole="fournisseur" />
+          <NavigationProperty Name="periode" Relationship="Self.FK__deduction___IdPe__46E78A0C" FromRole="deduction" ToRole="periode" />
+        </EntityType>
+        <EntityType Name="exercice">
+          <Key>
+            <PropertyRef Name="IdExercice" />
+          </Key>
+          <Property Name="IdExercice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Annee" Type="Int32" />
+          <Property Name="Date_debut" Type="DateTime" Precision="0" />
+          <Property Name="Date_fin" Type="DateTime" Precision="0" />
+          <Property Name="TypeEx" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ChiffreAffaire" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cloture" Type="Boolean" />
+          <Property Name="DateClosure" Type="DateTime" Precision="0" />
+          <Property Name="C_IdSociete" Type="Int32" />
+          <NavigationProperty Name="societe" Relationship="Self.FK__exercice___IdSoc__3E52440B" FromRole="exercice" ToRole="societe" />
+          <NavigationProperty Name="periodes" Relationship="Self.FK__periode___IdExer__412EB0B6" FromRole="exercice" ToRole="periode" />
+        </EntityType>
+        <EntityType Name="fournisseur">
+          <Key>
+            <PropertyRef Name="IdFournisseur" />
+          </Key>
+          <Property Name="IdFournisseur" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RaisonFiscale" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IdFiscale" Type="Int32" />
+          <Property Name="Ice" Type="Int32" />
+          <Property Name="Adresse" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="deductions" Relationship="Self.FK__deduction___IdFo__45F365D3" FromRole="fournisseur" ToRole="deduction" />
+        </EntityType>
+        <EntityType Name="periode">
+          <Key>
+            <PropertyRef Name="IdPeriode" />
+          </Key>
+          <Property Name="IdPeriode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomPeriode" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="MonDeclaTVA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DateDeclaration" Type="DateTime" Precision="0" />
+          <Property Name="C_IdExercice" Type="Int32" />
+          <NavigationProperty Name="deductions" Relationship="Self.FK__deduction___IdPe__46E78A0C" FromRole="periode" ToRole="deduction" />
+          <NavigationProperty Name="exercice" Relationship="Self.FK__periode___IdExer__412EB0B6" FromRole="periode" ToRole="exercice" />
+        </EntityType>
+        <EntityType Name="societe">
+          <Key>
+            <PropertyRef Name="IdSociete" />
+          </Key>
+          <Property Name="IdSociete" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiegeSoc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="FormeJuridique" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IdFiscal" Type="Int32" />
+          <Property Name="NumTaxPro" Type="Int32" />
+          <Property Name="Regime" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Ice" Type="Int32" />
+          <Property Name="RegistreCommerce" Type="Int32" />
+          <Property Name="NumCnss" Type="Int32" />
+          <Property Name="ModComptable" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LoginDGI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MdpDgi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Capital" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Activite" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TypeRegime" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="commune" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="associes" Relationship="Self.FK__associe___IdSoci__3B75D760" FromRole="societe" ToRole="associe" />
+          <NavigationProperty Name="exercices" Relationship="Self.FK__exercice___IdSoc__3E52440B" FromRole="societe" ToRole="exercice" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="idUtilisateur" />
+          </Key>
+          <Property Name="idUtilisateur" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="mot_passe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__associe___IdSoci__3B75D760">
+          <End Role="societe" Type="Self.societe" Multiplicity="0..1" />
+          <End Role="associe" Type="Self.associe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="societe">
+              <PropertyRef Name="IdSociete" />
+            </Principal>
+            <Dependent Role="associe">
+              <PropertyRef Name="C_IdSociete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__deduction___IdFo__45F365D3">
+          <End Role="fournisseur" Type="Self.fournisseur" Multiplicity="0..1" />
+          <End Role="deduction" Type="Self.deduction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fournisseur">
+              <PropertyRef Name="IdFournisseur" />
+            </Principal>
+            <Dependent Role="deduction">
+              <PropertyRef Name="C_IdFournisseur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__deduction___IdPe__46E78A0C">
+          <End Role="periode" Type="Self.periode" Multiplicity="0..1" />
+          <End Role="deduction" Type="Self.deduction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periode">
+              <PropertyRef Name="IdPeriode" />
+            </Principal>
+            <Dependent Role="deduction">
+              <PropertyRef Name="C_IdPeriode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__exercice___IdSoc__3E52440B">
+          <End Role="societe" Type="Self.societe" Multiplicity="0..1" />
+          <End Role="exercice" Type="Self.exercice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="societe">
+              <PropertyRef Name="IdSociete" />
+            </Principal>
+            <Dependent Role="exercice">
+              <PropertyRef Name="C_IdSociete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__periode___IdExer__412EB0B6">
+          <End Role="exercice" Type="Self.exercice" Multiplicity="0..1" />
+          <End Role="periode" Type="Self.periode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="exercice">
+              <PropertyRef Name="IdExercice" />
+            </Principal>
+            <Dependent Role="periode">
+              <PropertyRef Name="C_IdExercice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TvaAppBDEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="associes" EntityType="Self.associe" />
+          <EntitySet Name="deductions" EntityType="Self.deduction" />
+          <EntitySet Name="exercices" EntityType="Self.exercice" />
+          <EntitySet Name="fournisseurs" EntityType="Self.fournisseur" />
+          <EntitySet Name="periodes" EntityType="Self.periode" />
+          <EntitySet Name="societes" EntityType="Self.societe" />
+          <EntitySet Name="utilisateurs" EntityType="Self.utilisateur" />
+          <AssociationSet Name="FK__associe___IdSoci__3B75D760" Association="Self.FK__associe___IdSoci__3B75D760">
+            <End Role="societe" EntitySet="societes" />
+            <End Role="associe" EntitySet="associes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__deduction___IdFo__45F365D3" Association="Self.FK__deduction___IdFo__45F365D3">
+            <End Role="fournisseur" EntitySet="fournisseurs" />
+            <End Role="deduction" EntitySet="deductions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__deduction___IdPe__46E78A0C" Association="Self.FK__deduction___IdPe__46E78A0C">
+            <End Role="periode" EntitySet="periodes" />
+            <End Role="deduction" EntitySet="deductions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__exercice___IdSoc__3E52440B" Association="Self.FK__exercice___IdSoc__3E52440B">
+            <End Role="societe" EntitySet="societes" />
+            <End Role="exercice" EntitySet="exercices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__periode___IdExer__412EB0B6" Association="Self.FK__periode___IdExer__412EB0B6">
+            <End Role="exercice" EntitySet="exercices" />
+            <End Role="periode" EntitySet="periodes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TvaAppBDModel1StoreContainer" CdmEntityContainer="TvaAppBDEntities1">
+          <EntitySetMapping Name="associes">
+            <EntityTypeMapping TypeName="TvaAppBDModel1.associe">
+              <MappingFragment StoreEntitySet="associe">
+                <ScalarProperty Name="IdAssocie" ColumnName="IdAssocie" />
+                <ScalarProperty Name="NomAssocie" ColumnName="NomAssocie" />
+                <ScalarProperty Name="PrenomAssocie" ColumnName="PrenomAssocie" />
+                <ScalarProperty Name="NumCin" ColumnName="NumCin" />
+                <ScalarProperty Name="NumCarSejour" ColumnName="NumCarSejour" />
+                <ScalarProperty Name="Date_nai" ColumnName="Date_nai" />
+                <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fonction" ColumnName="Fonction" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="C_IdSociete" ColumnName="_IdSociete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="deductions">
+            <EntityTypeMapping TypeName="TvaAppBDModel1.deduction">
+              <MappingFragment StoreEntitySet="deduction">
+                <ScalarProperty Name="IdDeduction" ColumnName="IdDeduction" />
+                <ScalarProperty Name="num" ColumnName="num" />
+                <ScalarProperty Name="designation" ColumnName="designation" />
+                <ScalarProperty Name="DateFact" ColumnName="DateFact" />
+                <ScalarProperty Name="TauxTva" ColumnName="TauxTva" />
+                <ScalarProperty Name="MontHT" ColumnName="MontHT" />
+                <ScalarProperty Name="MontTva" ColumnName="MontTva" />
+                <ScalarProperty Name="MontTTC" ColumnName="MontTTC" />
+                <ScalarProperty Name="Prorata" ColumnName="Prorata" />
+                <ScalarProperty Name="ModePaiment" ColumnName="ModePaiment" />
+                <ScalarProperty Name="DatePaiment" ColumnName="DatePaiment" />
+                <ScalarProperty Name="observation" ColumnName="observation" />
+                <ScalarProperty Name="C_IdFournisseur" ColumnName="_IdFournisseur" />
+                <ScalarProperty Name="C_IdPeriode" ColumnName="_IdPeriode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="exercices">
+            <EntityTypeMapping TypeName="TvaAppBDModel1.exercice">
+              <MappingFragment StoreEntitySet="exercice">
+                <ScalarProperty Name="IdExercice" ColumnName="IdExercice" />
+                <ScalarProperty Name="Annee" ColumnName="Annee" />
+                <ScalarProperty Name="Date_debut" ColumnName="Date_debut" />
+                <ScalarProperty Name="Date_fin" ColumnName="Date_fin" />
+                <ScalarProperty Name="TypeEx" ColumnName="TypeEx" />
+                <ScalarProperty Name="ChiffreAffaire" ColumnName="ChiffreAffaire" />
+                <ScalarProperty Name="Cloture" ColumnName="Cloture" />
+                <ScalarProperty Name="DateClosure" ColumnName="DateClosure" />
+                <ScalarProperty Name="C_IdSociete" ColumnName="_IdSociete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fournisseurs">
+            <EntityTypeMapping TypeName="TvaAppBDModel1.fournisseur">
+              <MappingFragment StoreEntitySet="fournisseur">
+                <ScalarProperty Name="IdFournisseur" ColumnName="IdFournisseur" />
+                <ScalarProperty Name="RaisonFiscale" ColumnName="RaisonFiscale" />
+                <ScalarProperty Name="IdFiscale" ColumnName="IdFiscale" />
+                <ScalarProperty Name="Ice" ColumnName="Ice" />
+                <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="periodes">
+            <EntityTypeMapping TypeName="TvaAppBDModel1.periode">
+              <MappingFragment StoreEntitySet="periode">
+                <ScalarProperty Name="IdPeriode" ColumnName="IdPeriode" />
+                <ScalarProperty Name="NomPeriode" ColumnName="NomPeriode" />
+                <ScalarProperty Name="MonDeclaTVA" ColumnName="MonDeclaTVA" />
+                <ScalarProperty Name="DateDeclaration" ColumnName="DateDeclaration" />
+                <ScalarProperty Name="C_IdExercice" ColumnName="_IdExercice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="societes">
+            <EntityTypeMapping TypeName="TvaAppBDModel1.societe">
+              <MappingFragment StoreEntitySet="societe">
+                <ScalarProperty Name="IdSociete" ColumnName="IdSociete" />
+                <ScalarProperty Name="SiegeSoc" ColumnName="SiegeSoc" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="FormeJuridique" ColumnName="FormeJuridique" />
+                <ScalarProperty Name="IdFiscal" ColumnName="IdFiscal" />
+                <ScalarProperty Name="NumTaxPro" ColumnName="NumTaxPro" />
+                <ScalarProperty Name="Regime" ColumnName="Regime" />
+                <ScalarProperty Name="Ice" ColumnName="Ice" />
+                <ScalarProperty Name="RegistreCommerce" ColumnName="RegistreCommerce" />
+                <ScalarProperty Name="NumCnss" ColumnName="NumCnss" />
+                <ScalarProperty Name="ModComptable" ColumnName="ModComptable" />
+                <ScalarProperty Name="LoginDGI" ColumnName="LoginDGI" />
+                <ScalarProperty Name="MdpDgi" ColumnName="MdpDgi" />
+                <ScalarProperty Name="Capital" ColumnName="Capital" />
+                <ScalarProperty Name="Activite" ColumnName="Activite" />
+                <ScalarProperty Name="TypeRegime" ColumnName="TypeRegime" />
+                <ScalarProperty Name="commune" ColumnName="commune" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utilisateurs">
+            <EntityTypeMapping TypeName="TvaAppBDModel1.utilisateur">
+              <MappingFragment StoreEntitySet="utilisateur">
+                <ScalarProperty Name="idUtilisateur" ColumnName="idUtilisateur" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="mot_passe" ColumnName="mot_passe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="60427722e3c341feaef424d8196b9d70" Name="Diagram1">
+        <EntityTypeShape EntityType="TvaAppBDModel1.associe" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TvaAppBDModel1.deduction" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TvaAppBDModel1.exercice" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TvaAppBDModel1.fournisseur" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TvaAppBDModel1.periode" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TvaAppBDModel1.societe" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TvaAppBDModel1.utilisateur" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="TvaAppBDModel1.FK__associe___IdSoci__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="TvaAppBDModel1.FK__deduction___IdFo__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="TvaAppBDModel1.FK__deduction___IdPe__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="TvaAppBDModel1.FK__exercice___IdSoc__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="TvaAppBDModel1.FK__periode___IdExer__412EB0B6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

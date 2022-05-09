@@ -12,6 +12,9 @@ namespace TvaDeclarationApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new FormFinal());
+            /*Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormFinal());*/
         }
     }
 }

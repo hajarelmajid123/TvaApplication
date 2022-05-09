@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hFzoEV+Ol30SwyZWTSPXEo0KpzrlYT/WGL/nEq6cy5irwBr0xQvtCp3fiZJg4Vg6VCmBQ68vXjzlqscXgUBnNg==",
+  "dgSpecHash": "Bk8sWF1r6ydRdoqOurDodwZgFUa1qq0K2wgOj0mU+LoggzWJTssWQIskUitZCAMzwXGPzQJ6E8IqPYcgkoIZAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ELHAROUACHI NAIMA\\Desktop\\TvaApplication\\TvaDeclarationApp\\TvaDeclarationApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ELHAROUACHI NAIMA\\.nuget\\packages\\system.security.principal.windows\\6.0.0-preview.5.21301.5\\system.security.principal.windows.6.0.0-preview.5.21301.5.nupkg.sha512"
+  ],
   "logs": []
 }
